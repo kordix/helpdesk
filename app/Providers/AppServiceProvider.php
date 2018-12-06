@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use Auth;
+use View;
+
 use Illuminate\Support\Facades\Schema;
 
 use Illuminate\Support\ServiceProvider;
@@ -16,6 +19,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+        {
+        View::share('user', Auth::user());
+    }
     }
 
     /**

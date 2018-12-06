@@ -14,24 +14,17 @@ class TaskController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Channel $channel)
-    {
-        if ($channel->exists) {
-            $tasks = $channel->tasks()->latest();
-        } else {
-            //$tasks = $channel->tasks()->latest();
-            $tasks = Task::where('completed', 0)->latest();
-        }
-
-        $tasks = $tasks->get();
-        return view('layouts.index', compact('tasks'));
-    }
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function create()
     {
         $channels=Channel::all();

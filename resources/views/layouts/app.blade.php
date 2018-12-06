@@ -37,13 +37,13 @@
                         <li><a href="{{route('index',2)}}" class="nav-link">Zaopatrzenie</a></li>
                         <li><a href="{{route('index',3)}}" class="nav-link">Logistyka</a></li>
                         <li><a href="{{route('index',4)}}" class="nav-link">Księgowość</a></li>
-                        <li><a href="{{route('index',5)}}" class="nav-link">Moje</a></li>
+                        @guest @else <li><a href="{{route('index',5)}}" class="nav-link">Moje</a></li> @endguest
 
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <li><a href="{{route('create')}}" class="nav-link">Dodaj</a></li>
+                        <li><b><a href="{{route('create')}}" class="nav-link">Dodaj</a></b></li>
 
                         <!-- Authentication Links -->
                         @guest
