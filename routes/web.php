@@ -14,7 +14,7 @@ use App\Task;
 
 Auth::routes();
 
-Route::get('/index/{channel}', 'IndexController@index')->name('index');
+Route::get('/index/{channel}', 'indexcontroller@index')->name('index');
 Route::get('/', 'IndexController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/create', 'TaskController@create')->name('create');
