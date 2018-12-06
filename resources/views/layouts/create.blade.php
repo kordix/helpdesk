@@ -30,7 +30,7 @@
 </div>
 
 <div class="form-group">
-    <button class="btn btn-default" type="submit">Dodaj</button>
+    <button class="btn btn-success" type="submit">Dodaj</button>
 </div>
 
 </form>
