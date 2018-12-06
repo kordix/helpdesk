@@ -16,8 +16,16 @@ Auth::routes();
 
 Route::get('/index/{channel}', 'indexcontroller@index')->name('index');
 Route::get('/', 'indexcontroller@index')->name('home');
+Route::get('/completed', 'indexcontroller@indexcomplete')->name('indexcomplete');
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/create', 'TaskController@create')->name('create');
+Route::get('/edit/{task}', 'TaskController@edit')->name('edit');
+Route::patch('/update/{task}', 'TaskController@update')->name('update');
+Route::patch('/complete/{task}', 'TaskController@complete')->name('complete');
+
+
+
 Route::post('/store', 'TaskController@store')->name('store');
 
 Route::delete('/task/{task}', function (Task $task) {

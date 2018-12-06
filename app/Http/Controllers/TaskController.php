@@ -68,7 +68,8 @@ class TaskController extends Controller
      */
     public function edit(Task $task)
     {
-        //
+        $channels=Channel::all();
+        return view('layouts.edit', compact('task', 'channels'));
     }
 
     /**
@@ -78,9 +79,22 @@ class TaskController extends Controller
      * @param  \App\Task  $task
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Task $task)
+    public function update(Request $request, $id)
     {
-        //
+        Task::find($id)->update([
+        'title'=>request('title'),
+        'description'=>request('description'),
+        'priority_id'=>request('priority'),
+        'channel_id'=>request('channel')
+        ]);
+
+        return back();
+    }
+
+    public function complete(Request $request, $id)
+    {
+        Task::find($id)->update(['completed'=>1]);
+        return back();
     }
 
     /**
