@@ -29,6 +29,10 @@
     </select>
 </div>
 
+<div class="form-group">
+    <button class="btn btn-default" type="submit">Dodaj</button>
+</div>
+
 </form>
 </div>
 </div>
