@@ -44,6 +44,7 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <li><b><a href="{{route('indexcom')}}" class="nav-link"> ukończone</a></b></li>
                         <li><b><a href="{{route('create')}}" class="nav-link">Dodaj</a></b></li>
 
                         <!-- Authentication Links -->

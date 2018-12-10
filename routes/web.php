@@ -16,6 +16,8 @@ Auth::routes();
 
 Route::get('/index/{channel}', 'indexcontroller@index')->name('index');
 Route::get('/', 'indexcontroller@index')->name('home');
+Route::get('/indexcom', 'indexcontroller@indexcomplete')->name('indexcom');
+
 Route::get('/completed', 'indexcontroller@indexcomplete')->name('indexcomplete');
 
 Route::get('/home', 'HomeController@index')->name('home');

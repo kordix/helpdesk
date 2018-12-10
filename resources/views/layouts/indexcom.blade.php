@@ -7,7 +7,7 @@
     @foreach($tasks as $task)
         <div class="col-md-3">
             <div class="form-group">
-            <div class="card bg-success">
+            <div class="card text-white bg-success">
                 <div class="card-header">{{$task->title}} <p style="font-size:7px;margin:0px;padding:0px;text-align:right;float:right">{{$task->id}}</p></div>
 
                 <div class="card-body">
